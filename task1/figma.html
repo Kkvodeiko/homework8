@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Figma</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .header-section{
+        width: 1170px;
+        height: 75px;
+        background: #000000;
+        position: fixed;
+        z-index: 1;
+      }
+      .logo-header-item{
+        left: 115px;
+        position: absolute;
+      }
+      .categories-header-item{
+        width: 570px;
+        height: 75px;
+        margin: 0 0 0 550px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        flex-direction: row;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .category-item{
+        width: 113px;
+        height: 75px;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      .banner-section{
+        width: 1170px;
+        height: 794px;
+      }
+      .banner-image{
+        width: 1170px;
+        height: 794px;
+        display: flex;   
+        background: #000000;  
+      }
+      .banner-image > img {
+        width: 100%;
+        opacity: 0.5;
+      }
+      .banner-logo-item{
+        position: absolute;
+        width: 270px;
+        height: 100px;
+        left: 40px;
+        top: 160px;
+      }
+      .title-banner-item{
+        position: absolute;
+        top: 300px;
+        left: 40px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+      }
+      .line-banner-item{
+        position: absolute;
+        width: 170px;
+        height: 0px;
+        left: 40px;
+        top: 510px;
+        border: 1px solid #FFFFFF;
+      }
+      .text-banner-item{
+        position: absolute;
+        left: 40px;
+        top: 550px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+      }
+      .button-banner-item{
+        position: absolute;
+        top: 620px;
+        left: 40px;
+        width: 270px;
+        height: 58px;
+        border: 2px solid #FFFFFF;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      .banner-form {
+        position: absolute;
+        top: 170px;
+        width: 450px;
+        left: 700px;
+        height: 450px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .form-title {
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+      }
+
+      .form-title span {
+          color: #EC7979;
+      }
+
+      .banner-form>input {
+          font-size: large;
+          height: 38px;
+          width: 80%;
+          border: none;
+          border-bottom: 1px solid grey;
+          outline: none;
+      }
+
+      .banner-form>input {
+          font-size: large;
+          height: 38px;
+          width: 80%;
+          border: none;
+          border-bottom: 1px solid grey;
+      }
+
+      .banner-form>button {
+          background-color: #EC7979;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          border: none;
+          height: 60px;
+          width: 100%;
+          color: white;
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 20px;
+      }
+      .socialmedia-section{
+        width: 1170px;
+        height: 140px;
+        background: #F8EFEF;
+        position: absolute;
+      }
+      .title-socialmedia-item{
+        position: absolute;
+        width: 400px;
+        height: 60px;
+        left: 55px;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        color: #333333;
+      }
+      .text-socialmedia-item{
+        width: 470px;
+        height: 42px;
+        left: 55px;
+        top: 78px;
+        position: absolute;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: #86878B;
+      }
+      .socialmedia-image-item{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        margin: 50px 35px 0 555px;
+        flex-direction: row;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .first-item-content {
+        position: absolute;
+        max-width: 1170px;
+        height: 541px;
+        border: 1px solid #c6cbcd;
+        border-top: none;
+        border-right: none;
+        top: 1100px;
+      }
+      .first-tab {
+        width: 203px;
+        height: 40px;
+        border: 1px solid #c6cbcd;
+        border-radius: 5px 5px 0px 0px;
+        border-bottom: none;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+      }
+      .second-tab {
+        width: 295px;
+        height: 40px;
+        border: 1px solid #c6cbcd;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        margin: -40px 0 0 205px;
+      }
+      .third-tab {
+        width: 295px;
+        height: 40px;
+        border: 1px solid #c6cbcd;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        margin: -41px 0 0 405px;
+      }
+      .big-text-item {
+        position: absolute;
+        width: 570px;
+        height: 124px;
+        padding: 50px 500px 376px 100px;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 41px;
+      }
+      .small-text-item {
+        position: absolute;
+        width: 570px;
+        height: 210px;
+        padding: 152px 500px 139px 100px;
+        margin: 0 0 27px 0;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+      }
+      .button-item-text {
+        color: #ffffff;
+        text-align: center;
+        background: #ec7979;
+        font-size: 18px;
+        margin: 389px 800px 54px 100px;
+        width: 270px;
+        height: 58px;
+        align-items: center;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        display: grid;
+      }
+      .statue-image {
+        position: absolute;
+        padding: 0 0 0 700px;
+        width: 470px;
+        height: 500px;
+      }
+      .line-item {
+        width: 170px;
+        height: 0;
+        margin: 250px 500px;
+        position: absolute;
+        border: 1px solid #ec7979;
+      }
+      .title-item {
+        width: 1170px;
+        height: 150px;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        margin: 200px 0 515px 0;
+      }
+      .small-second-item {
+        width: 1169px;
+        height: 21px;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        margin: -520px 0 0 0;
+        text-align: center;
+        color: #86878b;
+      }
+      .content-box {
+        display: flex;
+        flex-direction: column;
+        vertical-align: middle;
+        text-align: center;
+        width: 1170px;
+        height: 665px;
+      }
+      .box-lamp {
+        display: flex;
+        flex-direction: column;
+      }
+      .lamp-image {
+        margin: 71px 939px 0 115px;
+        width: 170px;
+        height: 170px;
+      }
+      .big-box-lamp {
+        width: 369px;
+        height: 100px;
+        margin: 0 800px 0 90px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+      }
+      .small-box-lamp {
+        width: 370px;
+        height: 105px;
+        align-items: center;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        margin: 8px 800px 0 30px;
+        font-family: "Raleway", sans-serif;
+      }
+      .box-keyboard {
+        display: flex;
+        flex-direction: column;
+      }
+      .keyboard-image {
+        margin: -385px 552px 0 495px;
+        width: 170px;
+        height: 170px;
+      }
+      .big-box-keyboard {
+        width: 369px;
+        height: 100px;
+        margin: 0 800px 0 470px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+      }
+      .small-box-keyboard {
+        width: 370px;
+        height: 105px;
+        align-items: center;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        margin: 8px 800px 0 410px;
+        font-family: "Raleway", sans-serif;
+      }
+      .box-lightning {
+        display: flex;
+        flex-direction: column;
+      }
+      .lightning-image {
+        margin: -385px 139px 0 880px;
+        width: 170px;
+        height: 170px;
+      }
+      .big-box-lightning {
+        width: 369px;
+        height: 100px;
+        margin: 0 800px 0 850px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+      }
+      .small-box-lightning {
+        width: 370px;
+        height: 105px;
+        align-items: center;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        margin: 8px 800px 0 790px;
+        font-family: "Raleway", sans-serif;
+      }
+      .second-item-content {
+        position: absolute;
+        width: 1170px;
+        height: 950px;
+        top: 2470px;
+        background: #f5f5f5;
+      }
+      .second-big-title {
+        width: 1130px;
+        height: 150px;
+        margin: 50px 170px 700px 0;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        display: grid;
+        align-items: center;
+        text-align: center;
+      }
+      .second-line-item {
+        width: 170px;
+        height: 0;
+        margin: -690px 670px 700px 480px;
+        position: absolute;
+        border: 1px solid #ec7979;
+      }
+      .second-small-text {
+        width: 1169px;
+        height: 21px;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        margin: -650px -10px;
+        text-align: center;
+        color: #86878b;
+      }
+      .pricing-tables {
+        height: 530px;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        margin-top: 750px;
+        flex-direction: row;
+        margin-bottom: 50px;
+      }
+      .pricing-tables-item {
+        display: flex;
+        flex-direction: column;
+      }
+      .big-pricing-tables-item {
+        margin-bottom: 20px;
+      }
+      .type-row-item {
+        width: 370px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #333333;
+        color: #ffffff;
+        border: 2px solid #f5f5f5;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+      }
+      .price-row-item {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #333333;
+        color: #ffffff;
+        border: 2px solid #f5f5f5;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+      }
+      .limit-row-item {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #333333;
+        border: 2px solid #f5f5f5;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .memory-rows-items {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .memory-row-item {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+        color: #86878b;
+        border: 2px solid #f5f5f5;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+      }
+      .big-picture-item {
+        position: absolute;
+        width: 1170px;
+        height: 442px;
+        top: 4170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .city-image {
+        background: black;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 1170px;
+        height: 347px;
+      }
+
+      .city-image > img {
+        width: 100%;
+        opacity: 0.5;
+      }
+
+      .picture-title-item {
+        position: absolute;
+        width: 1170px;
+        height: 150px;
+        padding: 40px 0 242px 0;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+      }
+      .picture-line-item {
+        position: absolute;
+        width: 170px;
+        height: 0px;
+        left: 500px;
+        top: 130px;
+        border: 1px solid #ffffff;
+      }
+      .picture-text-item {
+        width: 1170px;
+        height: 21px;
+        position: absolute;
+        padding: 170px 0 181px 0;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+      }
+      .picture-button-item {
+        position: absolute;
+        width: 370px;
+        height: 58px;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+        border: 2px solid #ffffff;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #ffffff;
+        margin: 240px 390px 50px 390px;
+        display: grid;
+        align-items: center;
+      }
+      .customers-section{
+        width: 1170px;
+        height: 700px;
+        top: 3470px;
+        position: absolute;
+      }
+      .title-customers-item{
+        position: absolute;
+        width: 1170px;
+        height: 150px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+      }
+      .customers-line-item{
+        position: absolute;
+        width: 170px;
+        height: 0px;
+        left: 500px;
+        top: 170px;
+        border: 1px solid #EC7979;
+
+      }
+      .little-title-customers{
+          position: absolute;
+          width: 1170px;
+          height: 21px;
+          top: 240px;
+          font-family: 'Raleway', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+          display: grid;
+          align-items: center;
+          text-align: center;
+          color: #86878B;
+      }
+      .comments-customers-item{
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        margin-top: 350px;
+        flex-direction: row;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .comment-item{
+        display: flex;
+        flex-direction: column;
+      }
+      .triangle-item-comment{
+        position: absolute;
+        top: 520px;
+        width: 0;
+	      height: 0;
+	      border-left: 20px solid transparent;
+	      border-right: 20px solid transparent;
+        border-bottom: 30px solid #E2E2E2;
+        transform: rotate(-180deg);
+        margin-left: 50px;
+      }
+      .text-item-comment{
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #86878B;
+        width: 370px;
+        height: 180px;
+        justify-content: center;
+        background:  #E2E2E2;
+        border-radius: 10px;;
+      }
+      .comments-people-item{
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        margin-top: 350px;
+        flex-direction: row;
+        margin-bottom: 50px;
+      }
+      .photo-people-item{
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        margin-left: -130px;
+        top: 590px;
+      }
+      .name-people-item{
+        position: absolute;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        top: 590px;
+        margin-left: -30px;
+      }
+      .profession-people-item{
+        position: absolute;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        top: 659px;
+        margin-left: -30px;
+      }
+      .contact-section{
+        position: absolute;
+        width: 1170px;
+        height: 622px;
+        top: 4630px;
+        display: flex;
+        align-items: center;
+      }
+      .contact-title-item{
+        position: absolute;
+        top: 0px;
+        width: 1170px;
+        height: 150px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+      }
+      .contact-line-item{
+        position: absolute;
+        width: 170px;
+        height: 0px;
+        left: 500px;
+        top: 150px;
+        border: 1px solid #EC7979;
+      }
+      .contact-text-item{
+        position: absolute;
+        width: 1170px;
+        height: 21px;
+        top: 190px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        color: #86878B;
+      }
+      .contact-form{
+        position: absolute;
+        width: 1170px;
+        height: 310px;
+        top: 200px;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .contact-form>input {
+          width: 430px;
+          margin: 20px;
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          height: 38px;
+          border: none;
+          border-bottom: 1px solid grey;
+          outline: none;
+      }
+      .contact-form>textarea {
+          width: 430px;
+          margin: 20px;
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          height: 190px;
+          border: none;
+          border-bottom: 1px solid grey;
+          outline: none;
+          overflow: hidden;
+          resize: none;
+      }
+      .button-contact-item{
+        position: absolute;
+        width: 370px;
+        height: 58px;
+        left: 401px;
+        top: 350px;
+        background: #EC7979;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      .footer-section{
+        position: absolute;
+        width: 1170px;
+        height: 164px;
+        top: 5320px;
+        background: #000000;
+      }
+      .socialmedia-footer-item{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        margin: 40px 300px 81px 300px;
+        flex-direction: row;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .name-footer-item{
+        position: absolute;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+        width: 1170px;
+        height: 21px;
+        top: 116px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-section">
+      <div class="logo-header-item"> <img src="logo.svg" /></div>
+      <div class="categories-header-item">
+        <div class="category-item">Features</div>
+        <div class="category-item">About</div>
+        <div class="category-item">Pricing</div>
+        <div class="category-item">Reviews</div>
+        <div class="category-item">Contact</div>
+      </div>
+    </header>
+    <div class="banner-section">
+      <div class="banner-image"> <img src="banner.svg" />
+        <div class="banner-logo-item"> <img src="logo1.svg" /></div>
+        <div class="title-banner-item">MODERN AXURE TEMPLATE<br />
+        FOR BEAUTIFUL<br /> 
+        PROTOTYPES<br /></div>
+        <div class="line-banner-item"></div>
+        <div class="text-banner-item">Lorem ipsum dolor sit amet,<br /> 
+        consectetur adipiscing elit<br /></div>
+        <div class="button-banner-item">Download</div>
+      </div>
+      <div class="banner-content-right">
+        <form class="banner-form">
+            <div class="form-title">TRY YOUR <span>FREE</span> TRIAL TODAY</div>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Get started</button>
+        </form>
+    </div>
+    </div>
+    <div class="socialmedia-section">
+      <div class="title-socialmedia-item">Social Media</div>
+      <div class="text-socialmedia-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> 
+        Aenean euismod bibendum laoreet.<br /></div>
+        <div class="socialmedia-image-item">
+          <div class="interaction-item"><img src="facebook.svg" /></div>
+          <div class="interaction-item"><img src="twitter.svg" /></div>
+          <div class="interaction-item"><img src="in.svg" /></div>
+          <div class="interaction-item"><img src="pinterest.svg" /></div>
+          <div class="interaction-item"><img src="instagram.svg" /></div>
+          <div class="interaction-item"><img src="cat.svg" /></div>
+          <div class="interaction-item"><img src="internet.svg" /></div>
+        </div>
+    </div>
+    <div class="first-item-content">
+      <div class="tabs-content">
+        <div class="first-tab">TAB 1</div>
+        <div class="second-tab">TAB 2</div>
+        <div class="third-tab">TAB 3</div>
+      </div>
+      <div class="big-text-item">Tabs with soft transitioning effect.</div>
+      <div class="small-text-item">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean<br />
+        euismod<br />
+        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et<br />
+        viverra<br />
+        justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque<br />
+        penatibus et magnis dis parturient montes.<br />
+        <br />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean<br />
+        euismod<br />
+        bibendum laoreet.
+      </div>
+      <div class="statue-image">
+        <img src="statue.svg" />
+      </div>
+      <div class="button-item-text">Download</div>
+      <div class="line-item"></div>
+      <div class="title-item">WHY THIS IS AWESOME</div>
+      <div class="small-second-item">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+      <div class="content-box">
+        <div class="box-lamp">
+          <div class="lamp-image">
+            <img src="lamp.svg" />
+          </div>
+          <div class="big-box-lamp">Thoughtful Design</div>
+          <div class="small-box-lamp">
+            Lorem ipsum dolor sit amet, consectetur<br />
+            adipiscing<br />
+            elit. Aenean euismod bibendum laoreet.<br />
+            Proin gravida dolor sit amet lacus<br />
+            accumsan et viverra.
+          </div>
+        </div>
+        <div class="box-keyboard"></div>
+        <div class="keyboard-image">
+          <img src="keyboard.svg" />
+        </div>
+        <div class="big-box-keyboard">Thoughtful Design</div>
+        <div class="small-box-keyboard">
+          Lorem ipsum dolor sit amet, consectetur<br />
+          adipiscing<br />
+          elit. Aenean euismod bibendum laoreet.<br />
+          Proin gravida dolor sit amet lacus<br />
+          accumsan et viverra.
+        </div>
+        <div class="box-lightning"></div>
+        <div class="lightning-image">
+          <img src="lightning.svg" />
+        </div>
+        <div class="big-box-lightning">Thoughtful Design</div>
+        <div class="small-box-lightning">
+          Lorem ipsum dolor sit amet, consectetur<br />
+          adipiscing<br />
+          elit. Aenean euismod bibendum laoreet.<br />
+          Proin gravida dolor sit amet lacus<br />
+          accumsan et viverra.
+        </div>
+      </div>
+    </div>
+    <div class="second-item-content">
+      <div class="second-big-title">PRICING OPTIONS</div>
+      <div class="second-line-item"></div>
+      <div class="second-small-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+      <div class="pricing-tables">
+        <div class="pricing-tables-item">
+          <div class="type-row-item">Basic</div>
+          <div class="price-row-item">$10</div>
+          <div class="limit-row-item">Free for life</div>
+          <div class="memory-rows-items">
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+          </div>
+        </div>
+        <div class="big-pricing-tables-item">
+          <div class="type-row-item">Optima</div>
+          <div class="price-row-item">$20</div>
+          <div class="limit-row-item">Free for life</div>
+          <div class="memory-rows-items">
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+          </div>
+        </div>
+        <div class="pricing-tables-item">
+          <div class="type-row-item">Pro</div>
+          <div class="price-row-item">$30</div>
+          <div class="limit-row-item">Free for life</div>
+          <div class="memory-rows-items">
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+            <div class="memory-row-item">1 Gb Of Space</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customers-section">
+      <div class="title-customers-item">WHAT OUR CUSTOMERS ARE SAYING</div>
+      <div class="customers-line-item"></div>
+      <div class="little-title-customers">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="comments-customers-item">
+            <div class="comment-item">
+              <div class="square-item-comment"></div>
+              <div class="triangle-item-comment"></div>
+              <div class="text-item-comment">Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit. Doloribus <br />
+                accusamus expedita repellat similique <br />
+                odio aspernatur ex, architecto eaque <br />
+                quo suscipit. <br /></div>
+            </div>
+            <div class="comment-item">
+              <div class="square-item-comment"></div>
+              <div class="triangle-item-comment"></div>
+              <div class="text-item-comment">Lorem ipsum dolor sit amet, <br />
+                consectetur adipisicing elit. Doloribus <br />
+                accusamus expedita repellat similique <br />
+                odio aspernatur ex, architecto eaque <br />
+                quo suscipit.<br /></div>
+            </div>
+            <div class="comment-item">
+              <div class="square-item-comment"></div>
+              <div class="triangle-item-comment"></div>
+              <div class="text-item-comment">Lorem ipsum dolor sit amet, <br />
+                consectetur adipisicing elit. Doloribus <br />
+                accusamus expedita repellat similique <br />
+                odio aspernatur ex, architecto eaque <br />
+                quo suscipit.<br /></div>
+            </div>
+          </div>
+            <div class="comments-people-item">
+              <div class="people-section">
+                <div class="photo-people-item">
+                  <img src="DavisPhoto.svg" />
+                </div>
+                <div class="name-people-item">Davis Rhiel Madsen</div>
+                <div class="profession-people-item">Manager</div>
+              </div>
+              <div class="people-section">
+                <div class="photo-people-item">
+                  <img src="JaydonPhoto.svg" />
+                </div>
+                <div class="name-people-item">Jaydon Rosser</div>
+                <div class="profession-people-item">Manager</div>
+              </div>
+              <div class="people-section">
+                <div class="photo-people-item">
+                  <img src="CooperPhoto.svg" />
+                </div>
+                <div class="name-people-item">Cooper Dorwart</div>
+                <div class="profession-people-item">Manager</div>
+              </div>
+            </div>
+    </div>
+    <div class="big-picture-item">
+      <div class="city-image">
+        <img src="city.svg" />
+        <div class="picture-title-item">STYLISH AXURE DESIGN</div>
+        <div class="picture-line-item"></div>
+        <div class="picture-text-item">
+          Use the sections you need, remove the ones you don't. Create gorgeous
+          prototypes faster than ever!
+        </div>
+        <div class="picture-button-item">Download</div>
+      </div>
+    </div>
+    <div class="contact-section">
+      <div class="contact-title-item">CONTACT US</div>
+      <div class="contact-line-item"></div>
+      <div class="contact-text-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <form class="contact-form">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <textarea maxlength="1000" rows="10" placeholder="Message"></textarea>
+        <div class="button-contact-item">Send Message</div>
+      </form>
+    </div>
+    <footer class="footer-section">
+      <div class="socialmedia-footer-item">
+        <div class="interaction-item"><img src="facebook.svg" /></div>
+        <div class="interaction-item"><img src="twitter.svg" /></div>
+        <div class="interaction-item"><img src="in.svg" /></div>
+        <div class="interaction-item"><img src="pinterest.svg" /></div>
+        <div class="interaction-item"><img src="instagram.svg" /></div>
+        <div class="interaction-item"><img src="cat.svg" /></div>
+        <div class="interaction-item"><img src="internet.svg" /></div>
+      </div>
+      <div class="name-footer-item">© 2015 Axure Themes</div>
+    </footer>
+  </body>
+</html>
